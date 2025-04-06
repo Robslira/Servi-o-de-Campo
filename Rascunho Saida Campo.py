@@ -2,6 +2,15 @@ import pandas as pd
 import pywhatkit as kit
 import pyautogui
 import time
+from datetime import datetime
+
+# Exemplo de horário
+horario = "08:45:00"
+
+# Converter o horário para o formato desejado
+horario_formatado = datetime.strptime(horario, "%H:%M:%S").strftime("%H:%M")
+
+print(horario_formatado)  # Saída: 08:45
 
 # Caminho do arquivo Excel
 caminho_arquivo = "Saida_Campo.xlsx"
@@ -14,7 +23,8 @@ df.columns = df.columns.str.strip()
 # Lista de destinatários que não devem receber lembretes
 ignorar_destinatarios = ["Maria Alcântara", "Anizio Arruda", "América Ferreira", "Rosalina Jesus",
                          "Sinomar Marcelino", "Genoveva Miranda", "Luzia Oliveira", "Maria Oliveira",
-                         "Deyvison Silva", "Kalleb Soares", "Edna Silva"]
+                         "Deyvison Silva", "Kalleb Soares", "Edna Silva","Diego Souza", "Francinete Moura",
+                         "Gabrielly Souza","Rubia Santos","Thais Soares", "Fernanda Lima"]
 
 # Listar as colunas disponíveis para verificar a estrutura do DataFrame
 print("Colunas do DataFrame após ajustes:", df.columns.tolist())
@@ -99,11 +109,11 @@ for _, row in df.iterrows():
         
         # Adicionar informações do primeiro local
         if data1:
-            mensagem += f"📍 Local 1: {local1}\n🏘️ Endereço: {endereco1}\n📍 Bairro: {bairro1}\n📅 Data: {data1}\n⏰ Horário: {horario1}\n📢 Campanha: {campanha1} "
+            mensagem += f"📍 Local 1: {local1}\n🏘️ Endereço: {endereco1}\n📍 Bairro: {bairro1}\n\n📅 Data: {data1}\n⏰ Horário: {horario1}\n📢 Campanha: {campanha1} "
 
         # Adicionar informações do segundo local
         if data2:
-            mensagem += f"📍 Local 2: {local2}\n🏘️ Endereço: {endereco2}\n📍 Bairro: {bairro2}\n📅 Data: {data2}\n⏰ Horário: {horario2}\n📢 Campanha: {campanha2} "
+            mensagem += f"📍 Local 2: {local2}\n🏘️ Endereço: {endereco2}\n📍 Bairro: {bairro2}\n\n📅 Data: {data2}\n⏰ Horário: {horario2}\n📢 Campanha: {campanha2} "
 
         # Criar fechamento da mensagem
         mensagem += "😊"
