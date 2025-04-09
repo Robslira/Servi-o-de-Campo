@@ -24,7 +24,7 @@ df.columns = df.columns.str.strip()
 ignorar_destinatarios = ["Maria Alcântara", "Anizio Arruda", "América Ferreira", "Rosalina Jesus",
                          "Sinomar Marcelino", "Genoveva Miranda", "Luzia Oliveira", "Maria Oliveira",
                          "Deyvison Silva", "Kalleb Soares", "Edna Silva","Diego Souza", "Francinete Moura",
-                         "Gabrielly Souza","Rubia Santos","Thais Soares", "Fernanda Lima","Sabrina Magalhães"]
+                         "Gabrielly Souza","Rubia Santos","Thais Soares", "Fernanda Lima"]
 
 # Listar as colunas disponíveis para verificar a estrutura do DataFrame
 print("Colunas do DataFrame após ajustes:", df.columns.tolist())
@@ -34,14 +34,15 @@ df['data1'] = pd.to_datetime(df['data1'], format="%d/%m/%Y", errors='coerce')
 df['data2'] = pd.to_datetime(df['data2'], format="%d/%m/%Y", errors='coerce')
 
 # Dicionário para traduzir os dias da semana
-dias_semana = { 
-                    "Monday": "segunda-feira",
-                    "Tuesday": "terça-feira",
-                    "Wednesday": "quarta-feira",
-                    "Thursday": "quinta-feira",
-                    "Friday": "sexta-feira",
-                    "Saturday": "sábado",
-                    "Sunday": "domingo"}
+dias_semana = {
+    "Monday": "segunda-feira",
+    "Tuesday": "terça-feira",
+    "Wednesday": "quarta-feira",
+    "Thursday": "quinta-feira",
+    "Friday": "sexta-feira",
+    "Saturday": "sábado",
+    "Sunday": "domingo"
+}
 
 # Função para ajustar o formato do número de telefone
 def ajustar_telefone(numero):
@@ -129,3 +130,7 @@ for _, row in df.iterrows():
         
     except Exception as e:
         print(f"Erro ao processar ou enviar mensagem para {perfil} {nome} ({celular}): {e}")
+
+# Salvar o DataFrame atualizado no arquivo Excel (caso a coluna 'Perfil' tenha sido criada)
+df.to_excel(caminho_arquivo, sheet_name="Planilha1", index=False)
+print("Tabela Excel atualizada com as alterações.")
