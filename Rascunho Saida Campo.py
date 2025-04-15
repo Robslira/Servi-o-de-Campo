@@ -22,11 +22,14 @@ df.columns = df.columns.str.strip()
 
 # Lista de destinatários que não devem receber lembretes
 ignorar_destinatarios = [ "Maria Alcantara", "Anizio Arruda", "America Ferreira", "Rosalina Jesus",
-                          "Sinomar Marcelino", "Genoveva Miranda", "Luzia Oliveira", "Maria Oliveira",                         "Deyvison Silva", "Kalleb Soares", "Edna Silva","Diego Souza", "Francinete Moura",
-                          "Gabrielly Souza", "Rubia Santos", "Thais Soares", "Fernanda Lima", "Rian Moraes",
-                          "Sabrina Magalhaes", "Divina Damiao","Elaine Martins","Emily Silva","Lucilene Rosa",
-                          "Samyrah Oliveira","Sthefany Martins"]
+                          "Sinomar Marcelino", "Genoveva Miranda", "Luzia Oliveira", "Maria Oliveira",                         
+                          "Deyvison Silva", "Kalleb Soares", "Edna Silva","Diego Souza", "Francinete Moura",
+                           "Gabrielly Souza", "Rubia Santos", "Thais Soares", "Fernanda Lima", "Rian Moraes",
+                           "Sabrina Magalhaes", "Divina Damiao","Elaine Martins","Emily Silva","Lucilene Rosa",
+                          "Samyrah Oliveira","Sthefany Martins","Dayana Alves","Rejane Arantes","Rennan Monteiro",
+                          "Rosa Marcelino"]
 
+                          
 # Exibir as primeiras linhas do DataFrame para verificar os dados
 # Listar as colunas disponíveis para verificar a estrutura do DataFrame
 print("Colunas do DataFrame após ajustes:", df.columns.tolist())
@@ -62,7 +65,7 @@ for _, row in df.iterrows():
     try:
         # Ler o perfil e garantir valor padrão
         perfil = row.get("Perfil", None)
-        if pd.isna(perfil) or perfil not in ["irmão", "irmã", "estudante"]:
+        if pd.isna(perfil) or perfil not in ["Irmão", "Irmã", "Estudante"]:
             perfil = "Perfil não especificado"
 
         # Ler o nome e número de celular
@@ -106,7 +109,7 @@ for _, row in df.iterrows():
             data2, local2, endereco2, bairro2, horario2, campanha2 = [None] * 6
 
         # Criar a mensagem consolidada com 'Perfil' antes do nome
-        mensagem = f"Olá {perfil} {nome},\ntudo bem? 😊\n\nEste é um lembrete automático para informar\nos detalhes da sua saída de campo:\n\n"
+        mensagem = f"Olá {perfil},\n {nome},\ntudo bem? 😊\n\nEste é um lembrete automático para informar\nos detalhes da sua saída de campo:\n\n"
         
         # Adicionar informações do primeiro local
         if data1:
