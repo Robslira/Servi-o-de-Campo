@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 
 # Exemplo de horário
-horario = "08:45:00"
+horario = "08:30:00"
 
 # Converter o horário para o formato desejado
 horario_formatado = datetime.strptime(horario, "%H:%M:%S").strftime("%H:%M")
