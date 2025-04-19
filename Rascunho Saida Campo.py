@@ -24,10 +24,10 @@ df.columns = df.columns.str.strip()
 ignorar_destinatarios = [ "Maria Alcantara", "Anizio Arruda", "America Ferreira", "Rosalina Jesus",
                           "Sinomar Marcelino", "Genoveva Miranda", "Luzia Oliveira", "Maria Oliveira",                         
                           "Deyvison Silva", "Kalleb Soares", "Edna Silva","Diego Souza", "Francinete Moura",
-                           "Gabrielly Souza", "Rubia Santos", "Thais Soares", "Fernanda Lima", "Rian Moraes",
-                           "Sabrina Magalhaes", "Divina Damiao","Elaine Martins","Emily Silva","Lucilene Rosa",
-                          "Samyrah Oliveira","Sthefany Martins","Dayana Alves","Rejane Arantes","Rennan Monteiro",
-                          "Rosa Marcelino"]
+                          "Gabrielly Souza", "Rubia Santos", "Thais Soares", "Fernanda Lima", "Rian Moraes",
+                          "Sabrina Magalhaes", "Divina Damiao","Elaine Martins","Emily Silva","Lucilene Rosa",                          "Samyrah Oliveira","Sthefany Martins","Dayana Alves","Rejane Arantes","Rennan Monteiro",
+                          "Rosa Marcelino", "Thais Souza", "Leni Miranda","Luciana Rodrigues","Marco Aurelio",
+                          "Sarah Oliveira"]
 
                           
 # Exibir as primeiras linhas do DataFrame para verificar os dados
