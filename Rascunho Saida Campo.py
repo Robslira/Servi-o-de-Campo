@@ -27,7 +27,8 @@ ignorar_destinatarios = [ "Maria Alcantara", "Anizio Arruda", "America Ferreira"
                           "Gabrielly Souza", "Rubia Santos", "Thais Soares", "Fernanda Lima", "Rian Moraes",
                           "Sabrina Magalhaes", "Divina Damiao","Elaine Martins","Emily Silva","Lucilene Rosa",                          "Samyrah Oliveira","Sthefany Martins","Dayana Alves","Rejane Arantes","Rennan Monteiro",
                           "Rosa Marcelino", "Thais Souza", "Leni Miranda","Luciana Rodrigues","Marco Aurelio",
-                          "Sarah Oliveira"]
+                          "Sarah Oliveira","Adriele Barreto","Alzerino Santos","Antonio Rosa","Dennis Damiao",
+                          "Ivo Soares","Neuza Bastos","Rejane Arantes","Rennan Monteiro"]
 
                           
 # Exibir as primeiras linhas do DataFrame para verificar os dados
