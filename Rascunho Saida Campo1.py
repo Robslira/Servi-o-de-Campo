@@ -5,12 +5,12 @@ import time
 from datetime import datetime
 
 # Exemplo de horário
-horario = "00:00"
+horario = "08:45:00"
 
 # Converter o horário para o formato desejado
 horario_formatado = datetime.strptime(horario, "%H:%M:%S").strftime("%H:%M")
 
-print(horario_formatado)  # Saída: 00:00
+print(horario_formatado)  # Saída: 08:45
 
 # Caminho do arquivo Excel
 caminho_arquivo = "Saida_Campo.xlsx"
@@ -29,7 +29,7 @@ ignorar_destinatarios = [ "Maria Alcantara", "Anizio Arruda", "America Ferreira"
                           "Samyrah Oliveira","Sthefany Martins","Dayana Alves","Rejane Arantes","Rennan Monteiro",
                           "Rosa Marcelino", "Alzerino Santos","Antonio Rosa","Dennis Damiao", "Ivo Soares",
                           "Neuza Bastos","Rejane Arantes","Rennan Monteiro","Luciano Freitas","Luciano Ferreira",
-                          "Gisele Freitas","Odiley Duarte","Joao Junior","Sthefany Martins","Roberto Lira"]
+                          "Gisele Freitas","Odiley Duarte","Sthefany Martins","Roberto Lira"]
 
 # Adicionando os novos convidados à lista
 df.loc[len(df)] = {"nome": "Joao de Paula", "celular": "+5511999034025", "Perfil": "Irmão"}
